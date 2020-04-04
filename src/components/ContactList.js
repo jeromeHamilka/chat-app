@@ -31,9 +31,9 @@ const users = [
 
 const ContactList = () => {
   return (
-    <div>
-      {users.map(user => (
-        <Contact name={user.name} avatar={user.avatar} online={user.online} />
+    <div className="container-contact ">
+      {users.map((user, index) => (
+        <Contact {...user} index={index} key={index} />
       ))}
     </div>
   );
